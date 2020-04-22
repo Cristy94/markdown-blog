@@ -1,0 +1,7 @@
+DirectoryIndex blog-posts-list.php
+
+# Convert blog /blog?page=post-title.md to /blog/post-title
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*?)/?$ /blog/blog-page.php?page=$1.md [L]

@@ -1,0 +1,45 @@
+.markdown {
+    max-width: 800px;
+}
+
+.markdown h1 {
+    text-align: center;
+}
+
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+    text-align: left;
+}
+
+.markdown blockquote {
+    background: #fafafa;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 5px 10px 5px 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+.markdown blockquote:before,
+.markdown blockquote:after {
+    content: '“';
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    line-height: 50px;
+    font-size: 80px;
+    color: rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+}
+
+.markdown blockquote:after {
+    content: '”';
+    left: initial;
+    top: initial;
+    line-height: 0px;
+    bottom: 0px;
+    right: 0px;
+}
