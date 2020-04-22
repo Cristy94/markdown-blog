@@ -1,5 +1,5 @@
 # Markdown Blog
-Static PHP blog that renders markdown posts. No installation or database needed.
+Extremly simple static PHP blog that renders markdown posts. No installation or database needed.
 
 To create a post just write a new `.md` file. Everything else just works.
 
