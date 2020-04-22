@@ -15,7 +15,7 @@ The solution came by combining several suggestions received in the post mentione
  * Use `.htaccess` rewrites for nice blog post URLs.
 
 ## Demo
-You can see a [demo here](https://usertrack.net/blog).
+You can see a usage [demo here](https://usertrack.net/blog) (the blog is integrated into an existing site).
 
 ## Usage
 Copy the files to a PHP server and create new posts by adding new `post-url-slug.md` files in the `posts` folder.
