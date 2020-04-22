@@ -32,6 +32,20 @@ You can add your own `HTML` or `CSS` wherever you want. In the demo example I ju
 
 The `md-styles.css` is just used to stylize the Markdown preview in Visual Studio Code. You can safely remove it, but having one means that you can preview your blog post in VSCode with the exact styles as on your site.
 
+## Wait, but it uses PHP, why do you call it "static"?
+You are right! It's not static as in plain HTML is hosted on the server.
+
+But if you think about it, even a plain HTML site is hosted on a server which dynamically responds to HTTP requests.
+
+I personally still consider it to be "static" because:
+
+* I use **Cloudflare** on top of it, so requests do not reach my server, Cloudflare always responds with plain HTML/CSS, without executing the dynamic PHP code that processes the markdown.
+* The servers that the client reaches are the Cloudflare servers, where the static assets are indeed served directly as-is.
+* Content is written in a static file and doesn't change between requests.
+* There is no database or content generated based on dynamic data (the only dynamic part is the URL, but it always points to the file name, the same as with static sites).
+* There is no build step. If it's needed you can easily add a build step that simply saves the generated HTML output, thus making it truly satic. But now Cloudflare is already doing this.
+
+*What exactly makes a website "static"?*
 
 ## License
 MIT
