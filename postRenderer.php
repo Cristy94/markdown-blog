@@ -1,5 +1,5 @@
 <?php
-    require_once '../lib/Parsedown.php';
+    require_once 'Parsedown.php';
     $Parsedown = new Parsedown();
 
     function renderMarkdown($markdown) {

@@ -11,6 +11,6 @@ foreach ($files as $file) {
     ?>
     <div class="blog-post">
         <?php echo renderMarkdown($md); ?>
-        <a href="/blog/<?php echo explode('.', $file)[0] ?>">Read post</a>
+        <a href="<?php echo explode('.', $file)[0] ?>">Read post</a>
     </div>
 <?php } ?>

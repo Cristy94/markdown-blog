@@ -1,3 +1,15 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.blog {
+    max-width: 900px;
+    background: #f7f7f7;
+    margin: 0 auto;
+    padding: 50px;
+}
+
 .markdown {
     max-width: 800px;
 }
