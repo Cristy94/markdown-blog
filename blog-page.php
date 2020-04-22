@@ -18,7 +18,7 @@ if (file_exists($page)) {
 <html lang="en">
 <head>
     <link rel="stylesheet" href="blog.css">
-    <title><?php echo $pageTitle ?> | userTrack</title>
+    <title><?php echo $pageTitle ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
