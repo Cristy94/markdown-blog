@@ -23,8 +23,6 @@ You can see a usage [demo here](https://usertrack.net/blog) (the blog is integra
 Copy the files to a PHP server and create new posts by adding new `post-url-slug.md` files in the `posts` folder.
 The post must start with a `# Heading`, which will also be the title of the post and used in the `<title>` tag.
 
-You must also change in `.htaccess` the `/markdown-blog` path to be the path where your blog was uploaded.
-
 ## Customization
 The advantage of having something simple like this is that it's really easy to customize.
 
