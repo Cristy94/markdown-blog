@@ -24,7 +24,7 @@ Copy the `markdown-blog` folder to a PHP server.
 You can also change the name of the folder, normally you would name it `blog` so you can access it like `yoursite.com/blog`.
 
 ## Usage
-and create new posts by adding new `post-url-slug.md` files in the `posts` folder.
+You can create new posts by adding new `post-url-slug.md` files in the `posts` folder.
 The post must start with a `# Heading`, which will also be the title of the post and used in the `<title>` tag.
 
 ## Customization
