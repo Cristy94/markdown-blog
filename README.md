@@ -19,8 +19,12 @@ The solution came by combining several suggestions received in the post mentione
 ## Demo
 You can see a usage [demo here](https://usertrack.net/blog) (the blog is integrated into an existing site).
 
-## Installation and Usage
-Copy the `markdown-blog` folder to a PHP server and create new posts by adding new `post-url-slug.md` files in the `posts` folder.
+## Installation
+Copy the `markdown-blog` folder to a PHP server.  
+You can also change the name of the folder, normally you would name it `blog` so you can access it like `yoursite.com/blog`.
+
+## Usage
+and create new posts by adding new `post-url-slug.md` files in the `posts` folder.
 The post must start with a `# Heading`, which will also be the title of the post and used in the `<title>` tag.
 
 ## Customization
