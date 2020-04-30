@@ -3,6 +3,8 @@ Extremly simple "static" PHP blog that renders markdown posts. No installation o
 
 To create a post just write a new `.md` file. Everything else just works.
 
+**Note**: It's not a full blogging platform, does not currently come with any premade themes, it's just a script and specific folder structure to load and display markdown files.
+
 ## Why?
 You already have a site and want to integrate a blog within it.
 I [asked others for recommendations](https://www.indiehackers.com/post/is-there-any-tool-to-create-static-blog-posts-0e88ebc949), but most suggestions involved some complex stand-alone blogging platform or service.  
