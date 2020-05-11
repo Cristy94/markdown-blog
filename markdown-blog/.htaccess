@@ -1,5 +1,10 @@
 DirectoryIndex blog-posts-list.php
 
+# Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
 # Convert blog /markdown-blog?page=post-title.md to /markdown-blog/post-title
 RewriteEngine on
 RewriteBase /
