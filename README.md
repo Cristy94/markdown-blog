@@ -5,6 +5,9 @@ To create a post just write a new `.md` file. Everything else just works.
 
 **Note**: It's not a full blogging platform, does not currently come with any premade themes, it's just a script and specific folder structure to load and display markdown files.
 
+## Demo
+You can see a usage [demo here](https://usertrack.net/blog) (the blog is integrated into an existing site).
+
 ## Why?
 You already have a site and want to integrate a blog within it.
 I [asked others for recommendations](https://www.indiehackers.com/post/is-there-any-tool-to-create-static-blog-posts-0e88ebc949), but most suggestions involved some complex stand-alone blogging platform or service.  
@@ -17,9 +20,6 @@ The solution came by combining several suggestions received in the post mentione
  ![vscode-image-preview](https://code.visualstudio.com/assets/docs/languages/Markdown/preview-scroll-sync.gif)
  * Use a PHP Markdown parsing library to load the `.md` files on the fly. I used [Parsedown](https://github.com/erusev/parsedown). This means that no database is needed, there is no build step and you can easily version posts using git.
  * Use `.htaccess` rewrites for nice blog post URLs.
-
-## Demo
-You can see a usage [demo here](https://usertrack.net/blog) (the blog is integrated into an existing site).
 
 ## Installation
 Copy the `markdown-blog` folder to a PHP server.  
