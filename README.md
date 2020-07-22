@@ -6,7 +6,7 @@ To create a post just write a new `.md` file. Everything else just works.
 **Note**: It's not a full blogging platform, does not currently come with any premade themes, it's just a script and specific folder structure to load and display markdown files.
 
 ## Demo
-You can see a usage [demo here](https://usertrack.net/blog) (the blog is integrated into an existing site).
+You can see a usage [demo here](https://www.usertrack.net/blog) (the blog is integrated into an existing site).
 
 ## Why?
 You already have a site and want to integrate a blog within it.
