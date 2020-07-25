@@ -21,6 +21,11 @@ The solution came by combining several suggestions received in the post mentione
  * Use a PHP Markdown parsing library to load the `.md` files on the fly. I used [Parsedown](https://github.com/erusev/parsedown). This means that no database is needed, there is no build step and you can easily version posts using git.
  * Use `.htaccess` rewrites for nice blog post URLs.
 
+## Requirements
+
+* PHP 5.4+
+* Apache (or other .htaccess compatible web server)
+
 ## Installation
 Copy the `markdown-blog` folder to a PHP server.  
 You can also change the name of the folder, normally you would name it `blog` so you can access it like `yoursite.com/blog`.
