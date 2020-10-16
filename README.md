@@ -14,7 +14,7 @@ I [asked others for recommendations](https://www.indiehackers.com/post/is-there-
 I just wanted a simple way to create and display blog posts on my existing site.
 
 ## Solution
-The solution came by combining several suggestions received in the post mentioned above with some of my own ideas:
+The solution came together by combining several suggestions received in the post mentioned above with some of my own ideas:
  * Write blog posts in Markdown.
  * [Preview Markdown while typing directly in VSCode](https://code.visualstudio.com/docs/languages/markdown).
  ![vscode-image-preview](https://code.visualstudio.com/assets/docs/languages/Markdown/preview-scroll-sync.gif)
