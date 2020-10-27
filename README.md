@@ -1,5 +1,5 @@
 # Markdown Blog
-Extremly simple "static" PHP blog that renders markdown posts. No installation or database needed.
+Extremly simple "static" PHP blog that renders markdown posts. **No installation or database needed**.
 
 To create a post just write a new `.md` file. Everything else just works.
 
@@ -44,7 +44,7 @@ You can add your own `HTML` or `CSS` wherever you want. In the demo example I ju
 The `md-styles.css` is just used to stylize the Markdown preview in Visual Studio Code. You can safely remove it, but having one means that you can preview your blog post in VSCode with the exact styles as on your site.
 
 ## Wait, but it uses PHP, why do you call it "static"?
-You are right! It's not static as in plain HTML is hosted on the server.
+You are right! It's not static as in just plain HTML served from a server.
 But if you think about it, even a plain HTML site is hosted on a server which dynamically responds to HTTP requests.
 
 I personally still consider it to be "static" because:
