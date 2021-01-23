@@ -1,7 +1,8 @@
 <?php
     require_once 'Parsedown.php';
-    $Parsedown = new Parsedown();
+    require_once 'ParsedownExtra.php';
 
+    $Parsedown = new ParsedownExtra();
     function renderMarkdown($markdown) {
         global $Parsedown;
         return $Parsedown->text($markdown);
