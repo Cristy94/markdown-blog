@@ -5,9 +5,14 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
 RewriteRule ^ %1 [R=301,L]
 
-# Convert blog /markdown-blog?page=post-title.md to /markdown-blog/post-title
 RewriteEngine on
 RewriteBase /
+
+# Do redirects for the RSS file
+RewriteCond %{REQUEST_FILENAME} rss.php
+RewriteRule ^(.*) $1 [L]
+
+# Convert blog /markdown-blog?page=post-title.md to /markdown-blog/post-title
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 # Dynamically get the root directory path of the blog

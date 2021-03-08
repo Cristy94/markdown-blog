@@ -1,16 +1,13 @@
 <?php
-require_once 'postRenderer.php';
-$path = './posts';
-$files = array_slice(scandir($path), 2);
+    require_once 'postRenderer.php';
 
-foreach ($files as $file) {
-    $md = file_get_contents($path . '/' . $file);
-    // Get only summary (first lines of post)
-    $md = getFirstLines($md, 3);
-    $md = addTitleHref($md, $file);
-    ?>
+    $posts = getPostsList();
+    foreach ($posts as $post) {
+        $titleAndSummary = getFirstLines($post['markdown'], 3);
+        $titleAndSummary = addTitleHref($titleAndSummary, $post['slug']);
+?>
     <div class="blog-post">
-        <?php echo renderMarkdown($md); ?>
-        <a href="<?php echo explode('.', $file)[0] ?>">Read post</a>
+        <?php echo renderMarkdown($titleAndSummary); ?>
+        <a href="<?php echo $post['slug'] ?>">Read post</a>
     </div>
-<?php } ?>
+<?php }?>
