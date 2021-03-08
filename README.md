@@ -59,8 +59,7 @@ I personally still consider it to be "static" because:
 
 ## Changelog
 
-8 March 2020
----
+### 8 March 2021
 - Added automatic generation of RSS feed. By default it can be accessed at /blog/rss.php
 - Added settings.php file, holds basic configuration options and RSS channel details.
 - Added some helper function to getPostsList (used in rendering posts and RSS feed).
