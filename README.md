@@ -70,5 +70,5 @@ MIT
 
 ## Check out my analytics script
 This is the app for which I needed and created this blog project:  
-[![userTrack](https://www.usertrack.net/img/usertrack_logo.svg)](https://www.usertrack.net)  
+[![userTrack](https://www.usertrack.net/img/usertrack_logo.png)](https://www.usertrack.net)  
 Self-hosted analytics plaform with heatmaps and full session recordings.
