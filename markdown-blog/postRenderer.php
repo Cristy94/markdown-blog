@@ -1,6 +1,6 @@
 <?php
-    require_once __DIR__ .'/../lib/Parsedown.php';
-    require_once __DIR__ .'/../lib/ParsedownExtra.php';
+    require_once __DIR__ .'/Parsedown.php';
+    require_once __DIR__ .'/ParsedownExtra.php';
     require_once __DIR__ .'/settings.php';
 
     $Parsedown = new ParsedownExtra();
