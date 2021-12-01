@@ -55,3 +55,26 @@ html, body {
     bottom: 0px;
     right: 0px;
 }
+
+.markdown img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+}
+
+.markdown img + code {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.markdown code {
+    background: #313c51;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
+}
