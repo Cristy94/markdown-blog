@@ -38,12 +38,32 @@
         return  'https://' . $_SERVER['HTTP_HOST'] . substr($_SERVER['REQUEST_URI'], 0, strrpos($_SERVER['REQUEST_URI'], '/') + 1) . $slug;
     }
 
-    function getPostsList() {
+    function getSortedFiles($files, $sort) {
+        // Sort files descending by CREATED or MODIFIED time
+        if (!$sort) return $files;
+        
+        $sortedFiles = array();
+        foreach ($files as $file) {
+            if ($sort === 'CREATED') {
+                $sortedFiles[$file] = filectime(BLOG_POSTS_PATH . '/' . $file);
+            } else if($sort === 'MODIFIED'){
+                $sortedFiles[$file] = filemtime(BLOG_POSTS_PATH . '/' . $file);
+            }
+        }
+    
+        arsort($sortedFiles);
+        return array_keys($sortedFiles);
+    }
+
+    function getPostsList($sort = 'CREATED') {
         $files = array_slice(scandir(BLOG_POSTS_PATH), 2);
+
+        $sortedFiles = getSortedFiles($files, $sort);
+        
         $posts_list = array();
 
         // Get only summary (first lines of post)
-        foreach ($files as $file) {
+        foreach ($sortedFiles as $file) {
             $filePath = BLOG_POSTS_PATH . '/' . $file;
             $md = file_get_contents($filePath);
             $slug = getPostSlug($file);
