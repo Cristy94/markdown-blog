@@ -59,6 +59,10 @@ I personally still consider it to be "static" because:
 
 ## Changelog
 
+### 20 Nov 2023
+- Display post creation date in blog posts list
+- Add ability to sort the blog posts list (default: newest first — sort descending by file creation date)
+
 ### 8 March 2021
 - Added automatic generation of RSS feed. By default it can be accessed at /blog/rss.php
 - Added settings.php file, holds basic configuration options and RSS channel details.
