@@ -8,6 +8,6 @@
 ?>
     <div class="blog-post">
         <?php echo renderMarkdown($titleAndSummary); ?>
-        <a href="<?php echo $post['slug'] ?>">Read post</a>
+        <span class="blog-post__date"><?php echo date( "d M Y", $post['create_date']); ?></span> - <a href="<?php echo $post['slug'] ?>">Read post</a>
     </div>
 <?php }?>
