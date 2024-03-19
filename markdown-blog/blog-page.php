@@ -9,7 +9,8 @@ if (file_exists($page)) {
     $markdown = file_get_contents($page);
     $pageTitle = getPostTitle($markdown);
 } else {
-    $markdown = "# 404 <br/> Post '$postSlug' not found 😢 ";
+    $markdown = "# <center>404 😢<br/> Post not found<br/></center>";
+    $markdown.= '<center><a href="./">Back to all posts</a></center>';
     $pageTitle = 'Blog post not found!';
 }
 ?>
