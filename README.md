@@ -59,6 +59,11 @@ I personally still consider it to be "static" because:
 
 ## Changelog
 
+### 20 March 2024
+- ⚠️Security: Fix XSS issue with 404 posts.
+- ⚠️Security: Fix potential path traversal issue with 404 posts.
+- Add 404 Not Found HTTP header to 404 posts (for better SEO and user experience).
+  
 ### 20 Nov 2023
 - Display post creation date in blog posts list
 - Add ability to sort the blog posts list (default: newest first — sort descending by file creation date)
