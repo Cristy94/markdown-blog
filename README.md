@@ -60,7 +60,7 @@ I personally still consider it to be "static" because:
 ## Changelog
 
 ### 20 March 2024
-- ⚠️Security: Fix XSS issue with 404 posts.
+- ⚠️Security: Fix XSS issue with 404 posts. Thanks to [@Pinky](https://twitter.com/Pinkyakp/) for the report.
 - ⚠️Security: Fix potential path traversal issue with 404 posts.
 - Add 404 Not Found HTTP header to 404 posts (for better SEO and user experience).
   
