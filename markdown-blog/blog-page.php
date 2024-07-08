@@ -32,6 +32,8 @@ if (!$containsPathTraversal && file_exists($page)) {
     <div class="blog">
         <div class='markdown'>
                 <?php echo renderMarkdown($markdown); ?>
+
+                <a href="./"><< Back</a>
         </div>
     </div>
 </body>
