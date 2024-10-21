@@ -1,6 +1,8 @@
 # Markdown Blog
 Extremly simple "static" PHP blog that renders markdown posts. **No installation or database needed**.
 
+Tired for complex blog setups, vendor lock-in or all the WordPress drama?
+
 To create a post just write a new `.md` file. Everything else just works.
 
 **Note**: It's not a full blogging platform, does not currently come with any premade themes, it's just a script and specific folder structure to load and display markdown files.
@@ -76,6 +78,9 @@ I personally still consider it to be "static" because:
 
 ## License
 MIT
+
+## Keywords
+Blog, PHP Blog, Markdown Blog, WordPress alternative, Ghost alternative, PHP Markdown
 
 ## Check out my analytics script
 This is the app for which I needed and created this blog project:  
