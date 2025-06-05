@@ -1,21 +1,93 @@
+/* Reset and base styles */
 html, body {
     padding: 0;
     margin: 0;
+    font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Blog container styles */
+.blog-container {
+    min-height: 100vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .blog {
-    max-width: 900px;
-    background: #f7f7f7;
-    margin: 0 auto;
-    padding: 50px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
+@media (min-width: 768px) {
+    .blog {
+        padding: 3rem;
+    }
+}
+
+/* Blog header styles */
+.blog-header {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.blog-title {
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 0.5rem;
+}
+
+.blog-description {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Blog post list styles */
+.blog-post {
+    padding: 2rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.blog-post:last-child {
+    border-bottom: none;
+}
+
+.blog-post h1 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.blog-post h1 a {
+    color: #212529;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.blog-post h1 a:hover {
+    color: #0066cc;
+}
+
+.blog-post__date {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Markdown content styles */
 .markdown {
-    max-width: 800px;
+    max-width: 100%;
+    line-height: 1.7;
+    color: #212529;
 }
 
 .markdown h1 {
+    font-weight: 700;
     text-align: center;
+    margin: 2rem 0;
+    color: #212529;
 }
 
 .markdown h2,
@@ -23,58 +95,155 @@ html, body {
 .markdown h4,
 .markdown h5,
 .markdown h6 {
+    font-weight: 500;
     text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.markdown h2 {
+    font-size: 1.75rem;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 0.5rem;
+}
+
+.markdown h3 {
+    font-size: 1.5rem;
+}
+
+.markdown p {
+    margin-bottom: 1rem;
+}
+
+.markdown a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.markdown a:hover {
+    text-decoration: underline;
 }
 
 .markdown blockquote {
-    background: #fafafa;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 5px 10px 5px 35px;
+    background: #f8f9fa;
+    border-left: 4px solid #0066cc;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
     position: relative;
-    overflow: hidden;
+    font-style: italic;
 }
 
-.markdown blockquote:before,
-.markdown blockquote:after {
-    content: '“';
-    position: absolute;
-    left: 5px;
-    top: 10px;
-    line-height: 50px;
-    font-size: 80px;
-    color: rgba(0, 0, 0, 0.3);
-    font-family: Arial, sans-serif;
-}
-
-.markdown blockquote:after {
-    content: '”';
-    left: initial;
-    top: initial;
-    line-height: 0px;
-    bottom: 0px;
-    right: 0px;
+.markdown blockquote p:last-child {
+    margin-bottom: 0;
 }
 
 .markdown img {
     display: block;
-    margin: 10px auto;
+    margin: 2rem auto;
     max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .markdown img + code {
     text-align: center;
     width: 100%;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #6c757d;
 }
 
+/* Code styles */
 .markdown code {
-    background: #313c51;
-    color: white;
-    padding: 5px;
+    font-family: 'Ubuntu Mono', 'Courier New', monospace;
+    font-size: 0.875rem;
+    padding: 0.2rem 0.4rem;
+    background-color: #f8f9fa;
     border-radius: 3px;
-    display: inline-block;
-    width: 100%;
+    color: #e83e8c;
+}
+
+.markdown pre {
+    margin: 1.5rem 0;
+    border-radius: 6px;
     overflow: auto;
 }
+
+.markdown pre code {
+    display: block;
+    padding: 1rem;
+    background-color: #282c34;
+    color: #abb2bf;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+
+/* Table styles */
+.markdown table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+}
+
+.markdown table th,
+.markdown table td {
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+}
+
+.markdown table th {
+    background-color: #f8f9fa;
+    font-weight: 500;
+}
+
+.markdown table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* List styles */
+.markdown ul,
+.markdown ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.markdown li {
+    margin-bottom: 0.25rem;
+}
+
+/* Breadcrumb customization */
+.breadcrumb {
+    background-color: #f8f9fa;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .markdown h1 {
+        font-size: 1.75rem;
+    }
+    
+    .markdown h2 {
+        font-size: 1.5rem;
+    }
+    
+    .blog {
+        padding: 1.5rem;
+    }
+}
+
+/* Utility classes */
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Button overrides for blog style */
+.btn-outline-secondary {
+    font-family: 'Ubuntu', sans-serif;
+}
+
