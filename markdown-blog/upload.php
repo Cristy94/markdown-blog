@@ -6,7 +6,7 @@
  */
 
 // Configuration
-define('UPLOAD_TOKEN', 'MihaminaRKTMB'); // Change this to a secure token
+define('UPLOAD_TOKEN', getenv('AUTH_TOKEN'));
 define('POSTS_DIR', __DIR__ . '/posts');
 
 // Only accept PUT requests
