@@ -13,41 +13,41 @@ define('POSTS_DIR', __DIR__ . '/posts');
 if ($_SERVER['REQUEST_METHOD'] !== 'PUT') {
     http_response_code(405);
     header('Allow: PUT');
-    die('Method Not Allowed. Only PUT requests are accepted.');
+    die('Method Not Allowed');
 }
 
 // Check Content-Type header
 $contentType = $_SERVER['CONTENT_TYPE'] ?? '';
 if ($contentType !== 'text/markdown') {
     http_response_code(400);
-    die('Bad Request. Content-Type must be text/markdown.');
+    die('Bad Request.');
 }
 
 // Check authentication token
-$providedToken = $_SERVER['HTTP_X_MARDKDOWNBLOG_TOKEN'] ?? '';
+$providedToken = $_SERVER['HTTP_X_MARKDOWNBLOG_TOKEN'] ?? '';
 if ($providedToken !== UPLOAD_TOKEN) {
     http_response_code(401);
-    die('Unauthorized. Invalid or missing X-MardkdownBlog-Token header.');
+    die('Unauthorized.');
 }
 
 // Read the request body
 $content = file_get_contents('php://input');
 if (empty($content)) {
     http_response_code(400);
-    die('Bad Request. Request body is empty.');
+    die('Bad Request.');
 }
 
 // Split content into lines
 $lines = explode("\n", $content);
 if (count($lines) < 2) {
     http_response_code(400);
-    die('Bad Request. File must have at least 2 lines.');
+    die('Bad Request.');
 }
 
 // Check first line starts with "# "
 if (!preg_match('/^# (.+)/', $lines[0], $matches)) {
     http_response_code(400);
-    die('Bad Request. First line must start with "# " followed by the title.');
+    die('Bad Request.');
 }
 
 // Extract title from first line
@@ -56,7 +56,7 @@ $title = trim($matches[1]);
 // Check second line is blank
 if (trim($lines[1]) !== '') {
     http_response_code(400);
-    die('Bad Request. Second line must be blank.');
+    die('Bad Request.');
 }
 
 // Sanitize title for filename
@@ -88,8 +88,9 @@ if (!is_dir(POSTS_DIR)) {
 
 // Check if file already exists (unlikely due to timestamp, but good practice)
 if (file_exists($filepath)) {
-    http_response_code(409);
-    die('Conflict. A file with this name already exists.');
+    // If a file with the same name already exists, append a random 4-digit hexadecimal suffix to the filename
+    $suffix = bin2hex(random_bytes(2)); // 4 hex digits
+    $filename = $timestamp . '-' . $sanitizedTitle . '-' . $suffix . '.md';
 }
 
 // Save the file
