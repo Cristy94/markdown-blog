@@ -1,5 +1,15 @@
 DirectoryIndex blog-posts-list.php
 
+# Set an environment variable for the token
+# This token will be the one for the upload
+SetEnv AUTH_TOKEN "A_STRONG_TOKEN"
+
+# Set the blog title
+SetEnv BLOG_TITLE "My Awesome Blog"
+
+# Set the blog description
+SetEnv BLOG_DESCRIPTION "A blog about awesome things"
+
 # Remove trailing slash
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
