@@ -61,6 +61,9 @@ I personally still consider it to be "static" because:
 
 ## Changelog
 
+## 2 October 2025
+- Fix post summary if markdown file has different LF/CRLF newline formats
+
 ### 20 March 2024
 - ⚠️Security: Fix XSS issue with 404 posts. Thanks to [@Pinky](https://twitter.com/Pinkyakp/) for the report.
 - ⚠️Security: Fix potential path traversal issue with 404 posts.
