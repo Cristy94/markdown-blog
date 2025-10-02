@@ -30,8 +30,9 @@
     }
 
     function getFirstLines($string, $count, $skip = 0) {
-        $lines = array_slice(explode(PHP_EOL, $string), $skip, $count);
-        return implode(PHP_EOL, $lines);
+        $lines = preg_split('/\r\n|\r|\n/', $string);
+        $sliced = array_slice($lines, $skip, $count);
+        return implode(PHP_EOL, $sliced);
     }
 
     function getExternalURL($slug) {
